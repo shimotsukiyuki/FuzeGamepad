@@ -76,7 +76,7 @@ namespace HidLibrary
 
 		public HidDeviceData Read(int timeout)
 		{
-			var buffer = new byte[]{ };
+			var buffer = new byte[proxy.Capabilities.InputReportByteLength];
 			switch (proxy.ReadWithFileStream(buffer, timeout)) {
 				case HidLibraryCompatible.HidDevice.ReadStatus.Success:
 					return new HidDeviceData(buffer, HidDeviceData.ReadStatus.Success);
