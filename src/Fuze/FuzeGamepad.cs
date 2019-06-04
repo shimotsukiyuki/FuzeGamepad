@@ -65,12 +65,13 @@ namespace Fuze
                 bool changed = false;
 
                 string str = Program.ByteArrayToHexString(currentState);
-                if (!string.IsNullOrEmpty(str))
-                    Console.WriteLine(Program.ByteArrayToHexString(currentState));
+                //if (!string.IsNullOrEmpty(str))
+                //    Console.WriteLine(Program.ByteArrayToHexString(currentState));
+
 
                 if (data.Status == HidDeviceData.ReadStatus.Success && currentState.Length >= 10 && currentState[0] == 0x02)
                 {
-                    // Console.WriteLine(Program.ByteArrayToHexString(currentState));
+                    Console.WriteLine(Program.ByteArrayToHexString(currentState));
                     X360Buttons Buttons = X360Buttons.None;
                     if ((currentState[1] & 0x01) != 0) Buttons |= X360Buttons.A;
                     if ((currentState[1] & 0x02) != 0) Buttons |= X360Buttons.B;

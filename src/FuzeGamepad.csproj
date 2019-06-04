@@ -66,19 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fuze\FuzeGamepad.cs" />
-    <Compile Include="HidLibrary\Extensions.cs" />
-    <Compile Include="HidLibrary\HidAsyncState.cs" />
-    <Compile Include="HidLibrary\HidDevice.cs" />
-    <Compile Include="HidLibrary\HidDeviceAttributes.cs" />
-    <Compile Include="HidLibrary\HidDeviceCapabilities.cs" />
-    <Compile Include="HidLibrary\HidDeviceData.cs" />
-    <Compile Include="HidLibrary\HidDeviceEventMonitor.cs" />
-    <Compile Include="HidLibrary\HidDevices.cs" />
-    <Compile Include="HidLibrary\HidFastReadDevice.cs" />
-    <Compile Include="HidLibrary\HidReport.cs" />
-    <Compile Include="HidLibrary\IHidDevice.cs" />
-    <Compile Include="HidLibrary\IHidEnumerator.cs" />
-    <Compile Include="HidLibrary\NativeMethods.cs" />
+    <Compile Include="HidLibraryCompatible\Extensions.cs" />
+    <Compile Include="HidLibraryCompatible\HidDevice.cs" />
+    <Compile Include="HidLibraryCompatible\HidDeviceAttributes.cs" />
+    <Compile Include="HidLibraryCompatible\HidDeviceCapabilities.cs" />
+    <Compile Include="HidLibraryCompatible\HidDeviceCompatible.cs" />
+    <Compile Include="HidLibraryCompatible\HidDevices.cs" />
+    <Compile Include="HidLibraryCompatible\NativeMethods.cs" />
     <Compile Include="Fuze\Log.cs" />
     <Compile Include="Fuze\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +94,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HidLibraryCompatible" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
